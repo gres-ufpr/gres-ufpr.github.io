@@ -4,6 +4,7 @@ var url_database = "https://spreadsheets.google.com/feeds/list/12Cb1_WUF7f6O7NJU
 var team = [];
 
 var base_url = "";
+var language = "pt";
 
 if( ! isLocalhost()){
 	base_url = "https://raw.githubusercontent.com/gres-ufpr/website/master/";
@@ -17,7 +18,7 @@ function loadPage(hash, url){
 
 	url = base_url + url;
 
-	$.get(url, function(data, textStatus, request) {
+    $.get(url, function(data, textStatus, request) {
 		$("#content").html(data);
 	});
 
@@ -35,7 +36,7 @@ function loadPage(hash, url){
 }
 
 function isLocalhost(){
-	return window.location.host == "http://localhost:8080/";
+    return window.location.host == "localhost:8080";
 }
 
 $(function(){
@@ -58,5 +59,9 @@ $(function(){
 
 	$(".menu-item").click(function(){
 		loadPage($(this).attr("href"), $(this).attr("data-page"));
+	});
+
+    $(".btn-language").click(function(){
+		language = $(this).attr("data-lang");
 	});
 });
