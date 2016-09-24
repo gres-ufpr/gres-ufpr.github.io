@@ -3,11 +3,19 @@ var urls = {};
 var url_database = "https://spreadsheets.google.com/feeds/list/12Cb1_WUF7f6O7NJUnYIMJ3PPKIMMknQ26k6P-T_zdYY/od6/public/values?alt=json"
 var team = [];
 
+var base_url = "";
+
+if( ! isLocalhost()){
+	base_url = "https://raw.githubusercontent.com/gres-ufpr/website/master/";
+}
 
 function loadPage(hash, url){
+
 	if(hash == '' || hash == '#'){
-		url = "pages/home.html";
+		url = "pages/pt/inicio.html";
 	}
+
+	url = base_url + url;
 
 	$.get(url, function(data, textStatus, request) {
 		$("#content").html(data);
@@ -24,6 +32,10 @@ function loadPage(hash, url){
 			document.title = $(this).text()+" |  GrES UFPR";
 		}
 	});
+}
+
+function isLocalhost(){
+	return window.location.host == "http://localhost:8080/";
 }
 
 $(function(){
