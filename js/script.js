@@ -6,14 +6,18 @@ var team = [];
 var base_url = "";
 var language = "pt";
 
-if( ! isLocalhost()){
-	base_url = "https://raw.githubusercontent.com/gres-ufpr/website/master/";
+function isEnglishSelected(){
+	return window.location.pathname.startsWith("/index_en.html");
+}
+
+function isLocalhost(){
+    return window.location.host == "localhost:8080";
 }
 
 function loadPage(hash, url){
 
 	if(hash == '' || hash == '#'){
-		url = "pages/pt/inicio.html";
+		url = isEnglishSelected() ? "pages/en/home.html" : "pages/pt/inicio.html";
 	}
 
 	url = base_url + url;
@@ -35,10 +39,6 @@ function loadPage(hash, url){
 	});
 }
 
-function isLocalhost(){
-    return window.location.host == "localhost:8080";
-}
-
 $(function(){
 
 	$(".menu-item").each(function(){
@@ -48,10 +48,10 @@ $(function(){
 	var hash = location.hash;
 
 	if( ! hash || hash == "" || hash == "#"){
-		loadPage("#home", "pages/pt/inicio.html");
+		loadPage("#home", isEnglishSelected() ? "pages/en/home.html" : "pages/pt/inicio.html");
 	}else{
 		if(urls[hash] == undefined){
-			loadPage("#home", "pages/pt/inicio.html");
+			loadPage("#home", isEnglishSelected() ? "pages/en/home.html" : "pages/pt/inicio.html");
 		}else{
 			loadPage(hash, urls[hash]);
 		}

@@ -7,7 +7,7 @@ body {
 
 #header{
     background-image: url("../images/logo-pt-tranp.png");
-    background-color: #d7eaf1;
+    background-color: #ddf6fa;
 }
 
 header h4{
@@ -51,6 +51,24 @@ header h4{
 #chart{
     height: 320px;
 }
+
+
+
+
+.team-name{
+    margin-top: 0px;
+}
+
+
+.template-past-supervisions-img{
+    padding-right: 15px;
+    padding-top: 15px;
+}
+
+.template-past-supervisions-txt{
+    padding-top: 5px;
+}
+
 
 
 

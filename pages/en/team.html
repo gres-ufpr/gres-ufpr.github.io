@@ -2,12 +2,12 @@
 <script>
     $.getJSON( "json/team.json", function( data ) {
 
-        loadInformation(data.professors, templateProfessors, "#tab-professors", "Assunto", "Ingresso em");
-        loadInformation(data.pos_doc_students, templateStudents, "#tab-pos-doc-students", "#pos-doc-students", "Assunto", "Ingresso em");
-        loadInformation(data.phd_students, templateStudents, "#tab-phd-students", "#phd-students", "Assunto", "Ingresso em");
-        loadInformation(data.master_students, templateStudents, "#tab-master-students", "#masters", "Assunto", "Ingresso em");
-        loadInformation(data.undergraduates_students, templateStudents, "#tab-undergraduate-students", "#undergraduates", "Assunto", "Ingresso em");
-        loadInformation(data.scientific_initiation_students, templateStudents, "#tab-master-students", "#scientific_initiation", "Assunto", "Ingresso em");
+        loadInformation(data.professors, templateProfessors, "#tab-professors", "Subject", "Starting date");
+        loadInformation(data.pos_doc_students, templateStudents, "#tab-pos-doc-students", "#pos-doc-students", "Subject", "Starting date");
+        loadInformation(data.phd_students, templateStudents, "#tab-phd-students", "#phd-students", "Subject", "Starting date");
+        loadInformation(data.master_students, templateStudents, "#tab-master-students", "#masters", "Subject", "Starting date");
+        loadInformation(data.undergraduates_students, templateStudents, "#tab-undergraduate-students", "#undergraduates", "Subject", "Starting date");
+        loadInformation(data.scientific_initiation_students, templateStudents, "#tab-master-students", "#scientific_initiation", "Subject", "Starting date");
 
     }).fail(function(err) {
         console.error(err);
@@ -15,7 +15,7 @@
 </script>
 
 <header>
-    <h4>Equipe</h4>
+    <h4>Team</h4>
 </header>
 <div>
     <div class="templates hide">
@@ -27,7 +27,7 @@
                 <div class="col-xs-10 nopadding">
                     <h4 class="team-name"><b>{{NAME}}</b></h4>
                     <p>{{CURRICULUM}}</p>
-                    <a target="_blank" href="{{WEBPAGE}}"><img width="14px" style="margin-top: -4px;" src="images/home.png"> Página Pessoal</a> &nbsp
+                    <a target="_blank" href="{{WEBPAGE}}"><img width="14px" style="margin-top: -4px;" src="images/home.png"> Personal Webpage</a> &nbsp
                     <a target="_blank" href="{{LATTES}}"><img width="14px" style="margin-top: -3px;" src="images/lattes.png"> Lattes</a>
                 </div>
             </div>
@@ -44,7 +44,7 @@
                         <br>
                         {{SUBJECT}}
                         <br>
-                        <a target="_blank" href="{{WEBPAGE}}"><img width="14px" style="margin-top: -4px;" src="images/home.png"> Página Pessoal</a> &nbsp
+                        <a target="_blank" href="{{WEBPAGE}}"><img width="14px" style="margin-top: -4px;" src="images/home.png"> Personal Webpage</a> &nbsp
                         <a target="_blank" href="{{LATTES}}"><img width="14px" style="margin-top: -3px;" src="images/lattes.png"> Lattes</a>
                     <p>
                 </div>
@@ -64,10 +64,10 @@
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#tab-professors" aria-controls="tab-professors" role="tab" data-toggle="tab">Professores</a></li>
-        <li role="presentation"><a href="#tab-phd-students" aria-controls="tab-phd-students" role="tab" data-toggle="tab">Doutorandos</a></li>
-        <li role="presentation"><a href="#tab-master-students" aria-controls="tab-master-students" role="tab" data-toggle="tab">Mestrandos</a></li>
-        <li role="presentation"><a href="#tab-past-supervisions" aria-controls="tab-past-supervisions" role="tab" data-toggle="tab">Orientações Concluídas</a></li>
+        <li role="presentation" class="active"><a href="#tab-professors" aria-controls="tab-professors" role="tab" data-toggle="tab">Professors</a></li>
+        <li role="presentation"><a href="#tab-phd-students" aria-controls="tab-phd-students" role="tab" data-toggle="tab">Doctorate Students</a></li>
+        <li role="presentation"><a href="#tab-master-students" aria-controls="tab-master-students" role="tab" data-toggle="tab">Master Students</a></li>
+        <li role="presentation"><a href="#tab-past-supervisions" aria-controls="tab-past-supervisions" role="tab" data-toggle="tab">Past Supervisions</a></li>
     </ul>
     <br>
     <!-- Tab panes -->
