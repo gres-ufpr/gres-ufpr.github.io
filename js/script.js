@@ -14,6 +14,9 @@ function isLocalhost(){
     return window.location.host == "localhost:8080";
 }
 
+function isMobile(){
+    return $(document).width() <= 752;
+}
 function loadPage(hash, url){
 
     console.log(window.location.pathname);
@@ -66,4 +69,18 @@ $(function(){
     $(".btn-language").click(function(){
 		language = $(this).attr("data-lang");
 	});
+
+    var resize = function(){
+        if(isMobile()){
+            $(".menu-item").attr("data-target",".navbar-collapse");
+        }else{
+            $(".menu-item").removeAttr( "data-target" );
+        }
+    };
+
+    $(window).on('resize', function(){
+        resize();
+    });
+
+    resize();
 });
