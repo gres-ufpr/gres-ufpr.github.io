@@ -1,0 +1,121 @@
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+
+    color: #333;
+    overflow-y: scroll;
+}
+
+#header{
+    background-image: url("../images/logo-pt-tranp.png");
+    background-color: #ddf6fa;
+}
+
+header h4{
+    font-weight: bold;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    color: rgba(72, 79, 85, 1);
+    text-transform: uppercase;
+}
+
+.panel-heading{
+    font-weight: bold;
+    color: rgba(72, 79, 85, 1);
+    text-transform: uppercase;
+}
+
+.sidebar{
+    margin-top: 15px;
+}
+
+.navbar-right img{
+    display: inline;
+}
+
+.background-color{
+    margin-top: -20px;
+    background-image: url("../images/bg.png");
+    background-repeat: repeat-x;
+}
+
+#content{
+    line-height: 180%;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.equipe{
+    font-size: 13px;
+}
+
+#chart{
+    height: 420px;
+}
+
+
+
+
+.team-name{
+    margin-top: 0px;
+}
+
+
+.template-past-supervisions-img{
+    padding-right: 15px;
+    padding-top: 15px;
+}
+
+.template-past-supervisions-txt{
+    padding-top: 5px;
+}
+
+
+
+
+
+.navbar-nav > li > a, .navbar-brand {
+    padding-top: 5px !important;
+    padding-bottom:0 !important;
+    height: 30px;
+    font-size: 13px;
+}
+.navbar {min-height:30px !important;font-size: 13px;}
+
+#custom-bootstrap-menu.navbar-default .navbar-brand {
+    color: rgba(255, 255, 255, 1);
+}
+#custom-bootstrap-menu.navbar-default {
+    font-size: 14px;
+    background-color: rgba(72, 79, 85, 1);
+    border-width: 0px;
+    border-radius: 0px;
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(248, 248, 248, 0);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>li>a:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 170, 1, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:hover,
+#custom-bootstrap-menu.navbar-default .navbar-nav>.active>a:focus {
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(255, 170, 1, 1);
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle {
+    border-color: #ffaa01;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus {
+    background-color: #ffaa01;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle .icon-bar {
+    background-color: #ffaa01;
+}
+#custom-bootstrap-menu.navbar-default .navbar-toggle:hover .icon-bar,
+#custom-bootstrap-menu.navbar-default .navbar-toggle:focus .icon-bar {
+    background-color: #484f55;
+}

@@ -1,0 +1,29 @@
+<script>
+    // The custom configuration options
+    var options = {
+        visualization: true,
+        enabledLegend: true,
+        defaultPagination: 10,
+        yAxisTitle: "Papers",
+        chartTitle: ""
+    }
+
+    $.get( "https://raw.githubusercontent.com/gres-ufpr/basic-informations/master/publications.bib", function( data ) {
+        $("#source").html(data);
+
+        // Create the object
+        var publications = new Publications("#source", "#table", "#chart", options);
+        // Display the results on the screen
+        publications.draw();
+    });
+</script>
+
+<header>
+    <h4>Publicações</h4>
+</header>
+<div>
+    <div id="source" class="hide"></div>
+    <div id="chart"></div>
+    <div id="table"></div>
+    <p><small>Powered by <a target="_blank" href="http://thiagodnf.github.io/publications.js/">publications.js</a></small></p>
+<div>

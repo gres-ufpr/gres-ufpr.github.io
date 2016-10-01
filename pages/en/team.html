@@ -1,0 +1,105 @@
+<script src="js/equipe.js"></script>
+<script>
+    $.getJSON( "https://raw.githubusercontent.com/gres-ufpr/basic-informations/master/team.json", function( data ) {
+
+        loadInformation(data.professors, templateProfessors, "#tab-professors", "Subject", "Starting date");
+        loadInformation(data.pos_doc_students, templateStudents, "#tab-pos-doc-students", "#pos-doc-students", "Subject", "Starting date");
+        loadInformation(data.phd_students, templateStudents, "#tab-phd-students", "#phd-students", "Subject", "Starting date");
+        loadInformation(data.master_students, templateStudents, "#tab-master-students", "#masters", "Subject", "Starting date");
+        loadInformation(data.undergraduates_students, templateStudents, "#tab-undergraduate-students", "#undergraduates", "Subject", "Starting date");
+        loadInformation(data.scientific_initiation_students, templateStudents, "#tab-master-students", "#scientific_initiation", "Subject", "Starting date");
+
+    }).fail(function(err) {
+        console.error(err);
+    });
+</script>
+
+<header>
+    <h4>Team</h4>
+</header>
+<div>
+    <div class="templates hide">
+        <div id="template-professors">
+            <div class="row">
+                <div class="col-xs-2 nopadding">
+                    <img class="img-responsive" src="{{PHOTO_URL}}">
+                </div>
+                <div class="col-xs-10 nopadding">
+                    <h4 class="team-name"><b>{{NAME}}</b></h4>
+                    <p>{{CURRICULUM}}</p>
+                    <a target="_blank" href="{{WEBPAGE}}"><img width="14px" style="margin-top: -4px;" src="images/home.png"> Personal Webpage</a> &nbsp
+                    <a target="_blank" href="{{LATTES}}"><img width="14px" style="margin-top: -3px;" src="images/lattes.png"> Lattes</a>
+                </div>
+            </div>
+            <br>
+        </div>
+        <div id="template-students">
+            <div class="row">
+                <div class="col-xs-2 nopadding">
+                    <img class="img-responsive" src="{{PHOTO_URL}}">
+                </div>
+                <div class="col-xs-10 nopadding">
+                    <h4 class="team-name"><b>{{NAME}}</b></h4>
+                    <p>{{STARTING_DATE}}
+                        <br>
+                        {{SUBJECT}}
+                        <br>
+                        <a target="_blank" href="{{WEBPAGE}}"><img width="14px" style="margin-top: -4px;" src="images/home.png"> Personal Webpage</a> &nbsp
+                        <a target="_blank" href="{{LATTES}}"><img width="14px" style="margin-top: -3px;" src="images/lattes.png"> Lattes</a>
+                    <p>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <div id="template-past-supervisions">
+            <table>
+                <tr>
+                    <td class="template-past-supervisions-img" ><img width="50px" src="{{PHOTO_URL}}"></td>
+                    <td class="template-past-supervisions-txt"><b>{{NAME}}</b>, {{TITLE}}, {{ENDING_DATE}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <!-- Nav tabs -->
+    <ul class="nav nav-tabs" role="tablist">
+        <li role="presentation" class="active"><a href="#tab-professors" aria-controls="tab-professors" role="tab" data-toggle="tab">Professors</a></li>
+        <li role="presentation"><a href="#tab-phd-students" aria-controls="tab-phd-students" role="tab" data-toggle="tab">Doctorate Students</a></li>
+        <li role="presentation"><a href="#tab-master-students" aria-controls="tab-master-students" role="tab" data-toggle="tab">Master Students</a></li>
+        <li role="presentation"><a href="#tab-past-supervisions" aria-controls="tab-past-supervisions" role="tab" data-toggle="tab">Past Supervisions</a></li>
+    </ul>
+    <br>
+    <!-- Tab panes -->
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane fade in active clear-content-when-loading" id="tab-professors"></div>
+        <div role="tabpanel" class="tab-pane fade clear-content-when-loading" id="tab-phd-students"></div>
+        <div role="tabpanel" class="tab-pane fade clear-content-when-loading" id="tab-master-students"></div>
+        <div role="tabpanel" class="tab-pane fade" id="tab-past-supervisions">
+            <h4>Completed Postdocs</h4>
+            <hr>
+            <div class="clear-content-when-loading" id="pos-doc-students"></div>
+            <br>
+
+            <h4>Completed Doctorates</h4>
+            <hr>
+            <div class="clear-content-when-loading" id="phd-students"></div>
+            <br>
+
+            <h4>Completed Masters</h4>
+            <hr>
+            <div class="clear-content-when-loading" id="masters"></div>
+            <br>
+
+            <h4>Undergraduates</h4>
+            <hr>
+            <div class="clear-content-when-loading" id="undergraduates"></div>
+            <br>
+
+            <h4>Scientific Initiation</h4>
+            <hr>
+            <div class="clear-content-when-loading" id="scientific_initiation"></div>
+            <br>
+        </div>
+    </div>
+</div>
