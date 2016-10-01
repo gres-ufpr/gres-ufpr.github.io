@@ -16,6 +16,8 @@ function isLocalhost(){
 
 function loadPage(hash, url){
 
+    console.log(window.location.pathname);
+
 	if(hash == '' || hash == '#'){
 		url = isEnglishSelected() ? "pages/en/home.html" : "pages/pt/inicio.html";
 	}
