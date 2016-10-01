@@ -2628,9 +2628,8 @@ _fnCallbackFire:u,_fnLengthOverflow:Sa,_fnRenderer:Pa,_fnDataSource:y,_fnRowAttr
              legend: {
                  enabled: this.options.enabledLegend,
                  align: 'right',
-                 x: -30,
                  verticalAlign: 'top',
-                 y: 25,
+                 y: -10,
                  floating: true,
                  backgroundColor: (Highcharts.theme && Highcharts.theme.background2) || 'white',
                  borderColor: '#CCC',
