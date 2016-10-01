@@ -1,6 +1,6 @@
 <script src="js/equipe.js"></script>
 <script>
-    $.getJSON( "json/team.json", function( data ) {
+    $.getJSON( "https://raw.githubusercontent.com/gres-ufpr/basic-informations/master/team.json", function( data ) {
 
         loadInformation(data.professors, templateProfessors, "#tab-professors", "Assunto", "Ingresso em");
         loadInformation(data.pos_doc_students, templateStudents, "#tab-pos-doc-students", "#pos-doc-students", "Assunto", "Ingresso em");

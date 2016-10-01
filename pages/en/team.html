@@ -1,6 +1,6 @@
 <script src="js/equipe.js"></script>
 <script>
-    $.getJSON( "json/team.json", function( data ) {
+    $.getJSON( "https://raw.githubusercontent.com/gres-ufpr/basic-informations/master/team.json", function( data ) {
 
         loadInformation(data.professors, templateProfessors, "#tab-professors", "Subject", "Starting date");
         loadInformation(data.pos_doc_students, templateStudents, "#tab-pos-doc-students", "#pos-doc-students", "Subject", "Starting date");
@@ -76,27 +76,27 @@
         <div role="tabpanel" class="tab-pane fade clear-content-when-loading" id="tab-phd-students"></div>
         <div role="tabpanel" class="tab-pane fade clear-content-when-loading" id="tab-master-students"></div>
         <div role="tabpanel" class="tab-pane fade" id="tab-past-supervisions">
-            <h4>Pós-Docs Concluídos</h4>
+            <h4>Completed Postdocs</h4>
             <hr>
             <div class="clear-content-when-loading" id="pos-doc-students"></div>
             <br>
 
-            <h4>Doutorados Concluídos</h4>
+            <h4>Completed Doctorates</h4>
             <hr>
             <div class="clear-content-when-loading" id="phd-students"></div>
             <br>
 
-            <h4>Mestrados Concluídos</h4>
+            <h4>Completed Masters</h4>
             <hr>
             <div class="clear-content-when-loading" id="masters"></div>
             <br>
 
-            <h4>Graduações Concluídos</h4>
+            <h4>Undergraduates</h4>
             <hr>
             <div class="clear-content-when-loading" id="undergraduates"></div>
             <br>
 
-            <h4>Iniciação Científica</h4>
+            <h4>Scientific Initiation</h4>
             <hr>
             <div class="clear-content-when-loading" id="scientific_initiation"></div>
             <br>
