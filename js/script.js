@@ -7,7 +7,7 @@ var base_url = "";
 var language = "pt";
 
 function isEnglishSelected(){
-	return window.location.pathname.startsWith("/index_en.html");
+    return window.location.pathname.indexOf("/index_en.html") !== -1
 }
 
 function isLocalhost(){
